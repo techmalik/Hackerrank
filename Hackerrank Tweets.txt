@@ -1,0 +1,31 @@
+<?php
+$_fp = fopen("stdin", "r");
+/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    $count_ = 0;
+
+    $i = 0;
+    $word1 = ("hackerrank");
+    $word2 = ("@hackerrank");
+    $word3 = ("#hackerrank");
+
+    while(!feof($_fp))
+    {
+        $count1 = 0;
+        $count2 = 0;
+        $count3 = 0;
+        $count1 = 0;
+        
+        $tweet = fgets($_fp);   
+        $count1 = substr_count(strtolower($tweet), strtolower($word1));
+        $count2 = substr_count(strtolower($tweet), strtolower($word2));   
+        $count3 = substr_count(strtolower($tweet), strtolower($word3));
+          if ($count1>0 or $count2>0 or $count3>0)
+        {
+            $count_ += 1;
+            
+        }
+
+        }
+        echo $count_;
+
+?> 
